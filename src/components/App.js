@@ -2,18 +2,15 @@
  * Created by DreamerKing on 2017/4/25.
  */
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { renderRoutes } from 'react-router-config';
 
 class App extends Component {
     render() {
+        let {route} = this.props;
         return (
             <div>
                 <h1>App</h1>
-                <ul>
-                    <li><Link to="/about"/>About</li>
-                    <li><Link to="/inbox"/>Inbox</li>
-                </ul>
-                {this.props.children}
+                {renderRoutes(route.routes)}
             </div>
         )
     }
