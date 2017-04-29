@@ -2,18 +2,17 @@
  * Created by DreamerKing on 2017/4/25.
  */
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Route, Link } from 'react-router-dom';
+import Inbox from './Inbox';
+import About from './About';
 
 class App extends Component {
     render() {
         return (
             <div>
                 <h1>App</h1>
-                <ul>
-                    <li><Link to="/about"/>About</li>
-                    <li><Link to="/inbox"/>Inbox</li>
-                </ul>
-                {this.props.children}
+                <Route path="/about" component={About}/>
+                <Route path="/inbox" component={Inbox}/>
             </div>
         )
     }

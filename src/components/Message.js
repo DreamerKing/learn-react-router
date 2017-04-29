@@ -7,7 +7,7 @@ class Message extends Component {
     render() {
         return (
             <div>
-                <h3>Messgae {this.props.params.id}</h3>
+                <h3>Messgae </h3>
             </div>
         )
     }
